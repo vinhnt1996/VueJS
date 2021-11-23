@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 2 Tìm hiểu về Data Biding - Rằng buộc dữ liệu</title>
+    
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #app {
+            display: flex;
+            justify-content: center;
+            height: 400px;
+            border: 1px solid black;
+           
+
+        }
+        #image {
+            width: 30%;
+            background-color: aqua;
+            
+            text-align: center;
+        }
+        #content{
+            width: 50%;
+            background-color: chartreuse;
+        }
+        img {
+            width: 30%;
+            height: 30%;
+            margin-top: 20%;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+       <div id="image">
+           <img v-bind:src="url" alt="">
+       </div>
+       <div id="content">
+           <h2>Hình ảnh: {{ title }}</h2>
+           <p>Brand</p><p>{{ brand }}</p>
+           <h3>Price:{{formatPrice()}}</h3> 
+       </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
